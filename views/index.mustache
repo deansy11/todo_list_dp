@@ -8,16 +8,25 @@
     <header>
       <h1>THINGS YOU NEED TO DO</h1>
     </header>
-    <form class="" action="/" method="post">
-      <button type="button" name="button"></button>
+    <form class="" action="/toDoList" method="post">
+      <button type="submit" name="button"></button>
       <input type="text" name="toDoAdd" placeholder="What do you want to do?" value="">
       <ul>
+        <h2>You need to get these done... Better get started!</h2>
         {{#toDoList}}
         <li>
           <button type="button" name="button"></button>
           {{item}}
           </li>
         {{/toDoList}}
+      </ul>
+      <ul>
+        <h2>Look at all you've done!</h2>
+        <li>
+          <!-- need to create a name and mustache notation to get items to move to this list after they've been completed
+        Maybe push items on EventListener???  -->
+        </li>
+
       </ul>
     </form>
   </body>
