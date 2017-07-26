@@ -8,12 +8,13 @@ app.set("view engine", "mustache")
 
 // app.use(express.static("routefile???"))
 
-app.use(bodyParser.urlencoded({extended: false}));
+// app.use(bodyParser.urlencoded({extended: false}));
 
 app.get("/", (req, res) => {
   res.send("Hello");
+  console.log("Helloooo");
 });
 
 app.listen(8080, () => {
-  console.log("Node running successfully at http://localhost:3000");
+  console.log("Node running successfully at http://localhost:8080");
 })
