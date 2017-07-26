@@ -5,6 +5,20 @@
     <title></title>
   </head>
   <body>
-
+    <header>
+      <h1>THINGS YOU NEED TO DO</h1>
+    </header>
+    <form class="" action="/" method="post">
+      <button type="button" name="button"></button>
+      <input type="text" name="toDoAdd" placeholder="What do you want to do?" value="">
+      <ul>
+        {{#toDoList}}
+        <li>
+          <button type="button" name="button"></button>
+          {{item}}
+          </li>
+        {{/toDoList}}
+      </ul>
+    </form>
   </body>
 </html>
