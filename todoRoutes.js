@@ -22,6 +22,14 @@ router.post("/toDoList", (req, res) => {
     });
     res.redirect("/")
   });
+
+  // toDoList.forEach(function() {
+  //   document.getElementById("inputBtn").addEventListener("click", function() {
+  //     let strikethrough = document.getElementById("listAdd");
+  //     setTextContent(strikethrough, toDoList.strike());
+  //     console.log("Is this working?");
+  // });
+
 });
 
 module.exports = router
