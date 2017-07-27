@@ -15,21 +15,23 @@ router.post("/toDoList", (req, res) => {
     if (!result.isEmpty()) {
       res.render("index", {error: "Tell us what you want to do!"});
       return;
-    }
+    };
 
     toDoList.push({
       item: req.body.toDoAdd,
     });
+
     res.redirect("/")
+
   });
-
-  // toDoList.forEach(function() {
-  //   document.getElementById("inputBtn").addEventListener("click", function() {
-  //     let strikethrough = document.getElementById("listAdd");
-  //     setTextContent(strikethrough, toDoList.strike());
-  //     console.log("Is this working?");
-  // });
-
+    toDoList.forEach(function() {
+      document.getElementById("inputBtn").addEventListener("click", function() {
+        let strikethrough = document.getElementById("listAdd");
+        setTextContent(strikethrough, toDoList.strike());
+        console.log("Is this working?");
+        });
+    });
 });
 
-module.exports = router
+
+module.exports = router;

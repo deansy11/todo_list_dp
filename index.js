@@ -26,4 +26,4 @@ app.get("/", (req, res) => {
 
 app.listen(8080, () => {
   console.log("Node running successfully at http://localhost:8080");
-})
+});
