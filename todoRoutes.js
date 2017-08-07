@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-let toDoList = []
+let toDoList = [];
 
 router.get("/", (req, res) => {
   res.render("index", {toDoList: toDoList})
@@ -18,20 +18,21 @@ router.post("/toDoList", (req, res) => {
     };
 
     toDoList.push({
+      id: toDoList.length + 1,
       item: req.body.toDoAdd,
+      completed: false
     });
 
     res.redirect("/")
-
   });
-    toDoList.forEach(function() {
-      document.getElementById("inputBtn").addEventListener("click", function() {
-        let strikethrough = document.getElementById("listAdd");
-        setTextContent(strikethrough, toDoList.strike());
-        console.log("Is this working?");
-        });
-    });
 });
 
-
+router.get("/:id", (req, res) => {
+  toDoList.forEach((item) => {
+    if(item.id == req.params.id) {
+      item.completed = true
+    }
+    res.redirect("/")
+  });
+});
 module.exports = router;
